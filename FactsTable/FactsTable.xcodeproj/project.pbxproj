@@ -15,6 +15,7 @@
 		2E16602124393EF2002D2E75 /* FactsTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16602024393EF2002D2E75 /* FactsTableUITests.swift */; };
 		2E166030243A9116002D2E75 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16602F243A9116002D2E75 /* Welcome.swift */; };
 		2E166032243A9155002D2E75 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E166031243A9155002D2E75 /* Row.swift */; };
+		2E166034243A93C9002D2E75 /* URLSession+WelcomeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E166033243A93C9002D2E75 /* URLSession+WelcomeTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2E16602224393EF2002D2E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E16602F243A9116002D2E75 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		2E166031243A9155002D2E75 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		2E166033243A93C9002D2E75 /* URLSession+WelcomeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+WelcomeTask.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				2E16600724393EF2002D2E75 /* Assets.xcassets */,
 				2E16600924393EF2002D2E75 /* LaunchScreen.storyboard */,
 				2E16600C24393EF2002D2E75 /* Info.plist */,
+				2E166033243A93C9002D2E75 /* URLSession+WelcomeTask.swift */,
 			);
 			path = FactsTable;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E166032243A9155002D2E75 /* Row.swift in Sources */,
+				2E166034243A93C9002D2E75 /* URLSession+WelcomeTask.swift in Sources */,
 				2E16600324393EF0002D2E75 /* ViewController.swift in Sources */,
 				2E166030243A9116002D2E75 /* Welcome.swift in Sources */,
 				2E165FFF24393EF0002D2E75 /* AppDelegate.swift in Sources */,
