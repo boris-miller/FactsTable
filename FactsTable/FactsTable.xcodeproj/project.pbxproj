@@ -18,6 +18,8 @@
 		2E166034243A93C9002D2E75 /* URLSession+WelcomeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E166033243A93C9002D2E75 /* URLSession+WelcomeTask.swift */; };
 		2E166036243A9B1A002D2E75 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E166035243A9B1A002D2E75 /* Service.swift */; };
 		2E79E106243AA826008FF385 /* FactsTable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E79E105243AA826008FF385 /* FactsTable.strings */; };
+		2E79E109243ABE57008FF385 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E79E108243ABE57008FF385 /* RowCell.swift */; };
+		2E79E10B243AC12B008FF385 /* UiView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E79E10A243AC12B008FF385 /* UiView+Anchor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		2E166033243A93C9002D2E75 /* URLSession+WelcomeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+WelcomeTask.swift"; sourceTree = "<group>"; };
 		2E166035243A9B1A002D2E75 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2E79E105243AA826008FF385 /* FactsTable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = FactsTable.strings; sourceTree = "<group>"; };
+		2E79E108243ABE57008FF385 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
+		2E79E10A243AC12B008FF385 /* UiView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Anchor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2E16602E243A90C4002D2E75 /* Models */,
+				2E79E107243ABE17008FF385 /* Views */,
 				2E165FFE24393EF0002D2E75 /* AppDelegate.swift */,
 				2E16600224393EF0002D2E75 /* ViewController.swift */,
 				2E16600724393EF2002D2E75 /* Assets.xcassets */,
@@ -143,6 +148,15 @@
 				2E166031243A9155002D2E75 /* Row.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2E79E107243ABE17008FF385 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E79E108243ABE57008FF385 /* RowCell.swift */,
+				2E79E10A243AC12B008FF385 /* UiView+Anchor.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E79E109243ABE57008FF385 /* RowCell.swift in Sources */,
 				2E166032243A9155002D2E75 /* Row.swift in Sources */,
 				2E166034243A93C9002D2E75 /* URLSession+WelcomeTask.swift in Sources */,
 				2E16600324393EF0002D2E75 /* ViewController.swift in Sources */,
 				2E166030243A9116002D2E75 /* Welcome.swift in Sources */,
+				2E79E10B243AC12B008FF385 /* UiView+Anchor.swift in Sources */,
 				2E165FFF24393EF0002D2E75 /* AppDelegate.swift in Sources */,
 				2E166036243A9B1A002D2E75 /* Service.swift in Sources */,
 			);

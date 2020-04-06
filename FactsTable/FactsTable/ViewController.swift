@@ -10,21 +10,43 @@ import UIKit
 
 class ViewController: UITableViewController {
     
+    private static let estimatedRowHeight: CGFloat = 60
     private lazy var service = Service()
+    private let cellId = "RowCellId"
     
     private var welcome: Welcome? {
         didSet {
             updateTitle()
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadData()
+        tableView.register(RowCell.self, forCellReuseIdentifier: cellId)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = Self.estimatedRowHeight
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! RowCell
+        let currentLastItem = welcome?.rows[indexPath.row]
+        cell.row = currentLastItem
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return welcome?.rows.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 
-    func updateTitle() {
+    private func updateTitle() {
         DispatchQueue.main.async {
             self.title = self.welcome?.title
         }
