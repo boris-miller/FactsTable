@@ -20,6 +20,7 @@
 		2E79E106243AA826008FF385 /* FactsTable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E79E105243AA826008FF385 /* FactsTable.strings */; };
 		2E79E109243ABE57008FF385 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E79E108243ABE57008FF385 /* RowCell.swift */; };
 		2E79E10B243AC12B008FF385 /* UiView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E79E10A243AC12B008FF385 /* UiView+Anchor.swift */; };
+		2E79E10D243ACAB2008FF385 /* UIImageView+AsyncLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E79E10C243ACAB2008FF385 /* UIImageView+AsyncLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2E79E105243AA826008FF385 /* FactsTable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = FactsTable.strings; sourceTree = "<group>"; };
 		2E79E108243ABE57008FF385 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 		2E79E10A243AC12B008FF385 /* UiView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Anchor.swift"; sourceTree = "<group>"; };
+		2E79E10C243ACAB2008FF385 /* UIImageView+AsyncLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				2E79E108243ABE57008FF385 /* RowCell.swift */,
 				2E79E10A243AC12B008FF385 /* UiView+Anchor.swift */,
+				2E79E10C243ACAB2008FF385 /* UIImageView+AsyncLoading.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				2E79E10B243AC12B008FF385 /* UiView+Anchor.swift in Sources */,
 				2E165FFF24393EF0002D2E75 /* AppDelegate.swift in Sources */,
 				2E166036243A9B1A002D2E75 /* Service.swift in Sources */,
+				2E79E10D243ACAB2008FF385 /* UIImageView+AsyncLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
