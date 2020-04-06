@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private lazy var service = Service()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        reloadData()
+    }
+    
+    private func reloadData()  {
+        service.retrieve { (welcome, error) in
+            debugPrint("***Welcome:\n\(String(describing: welcome))\n\n***Error:\n\(String(describing: error))")
+        }
     }
 
-
 }
-
