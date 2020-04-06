@@ -20,7 +20,25 @@ extension URLSession {
                 completionHandler(nil, response, error)
                 return
             }
-            completionHandler(try? JSONDecoder().decode(T.self, from: data), response, nil)
+            switch response?.textEncodingName {
+            case "iso-8859-1":
+                debugPrint("The encoding is not supported. Workaround is necessary.")
+                var t: T?
+                if let jsonString = String(data: data, encoding: .isoLatin1),
+                    let utf8String = jsonString.cString(using: .utf8),
+                    let str = String(utf8String: utf8String),
+                    let data = str.data(using: .utf8) {
+                    t = try? JSONDecoder().decode(T.self, from: data)
+                }
+                completionHandler(t, response, nil)
+            default:
+                let t = try? JSONDecoder().decode(T.self, from: data)
+                if t == nil {
+                    debugPrint("Expecting UTF-8 or other data supported by JSONDecoder. `\(response?.textEncodingName ?? "")` encoding is not supported")
+                }
+                completionHandler(t, response, nil)
+            }
+           
         }
     }
     
