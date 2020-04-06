@@ -25,7 +25,6 @@ class RowCell: UITableViewCell {
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
         lbl.textAlignment = .left
-        lbl.backgroundColor = .blue
         return lbl
     }()
     
@@ -35,7 +34,6 @@ class RowCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
-        lbl.backgroundColor = .red
         return lbl
     }()
     
@@ -43,7 +41,6 @@ class RowCell: UITableViewCell {
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = true
-        imgView.backgroundColor = .gray
         return imgView
     }()
     
