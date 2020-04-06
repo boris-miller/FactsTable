@@ -55,6 +55,13 @@ class RowCell: UITableViewCell {
         descriptionLabel.anchor(top: titleLabel.bottomAnchor, left: rowImage.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 16, paddingLeft: 16, paddingBottom: 42, paddingRight: 16, width: 0, height: 0, enableInsets: false)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        rowImage.image = nil
+        downloadImageTask?.cancel()
+        downloadImageTask = nil
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
