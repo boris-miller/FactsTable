@@ -8,17 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     
     private lazy var service = Service()
+    
+    private var welcome: Welcome? {
+        didSet {
+            updateTitle()
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadData()
     }
-    
+
+    func updateTitle() {
+        DispatchQueue.main.async {
+            self.title = self.welcome?.title
+        }
+    }
+
     private func reloadData()  {
-        service.retrieve { (welcome, error) in
+        service.retrieve { [weak self] (welcome, error) in
+            self?.welcome = welcome
             debugPrint("***Welcome:\n\(String(describing: welcome))\n\n***Error:\n\(String(describing: error))")
         }
     }
