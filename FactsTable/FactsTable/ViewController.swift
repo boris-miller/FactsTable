@@ -19,6 +19,7 @@ class ViewController: UITableViewController {
             updateTitle()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             }
         }
     }
@@ -29,6 +30,12 @@ class ViewController: UITableViewController {
         tableView.register(RowCell.self, forCellReuseIdentifier: cellId)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = Self.estimatedRowHeight
+
+        // Add Refresh Control to Table View
+        refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        
+        refreshControl?.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,6 +51,11 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
+        debugPrint("refresh data\n")
+        reloadData()
     }
 
     private func updateTitle() {
