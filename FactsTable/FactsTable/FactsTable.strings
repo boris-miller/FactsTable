@@ -1,0 +1,11 @@
+/* 
+  FactsTable.strings
+  FactsTable
+
+  Created by Boris Miller on 6/4/20.
+  Copyright © 2020 Boris Miller. All rights reserved.
+*/
+
+"unknownErrorLocalizedDescriptionKey" = "Response did not contain any data";
+
+"invalidURLLocalizedDescriptionKey" = "Invalid URL";
